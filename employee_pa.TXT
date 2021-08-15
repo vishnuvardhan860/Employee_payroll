@@ -1,17 +1,16 @@
-UC-3
+UC-5
 
+mysql> update employee_payroll set salary = 500000000 where name='K VISHNU';
+Query OK, 1 row affected (0.26 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
 
 mysql> SELECT * FROM employee_payroll
-    -> WHERE start BETWEEN CAST('2019-01-01' AS DATE) AND DATE(NOW())
-    -> WHERE start BETWEEN CAST('2019-01-01' AS DATE) AND DATE(NOW());
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE start BETWEEN CAST('2019-01-01' AS DATE) AND DATE(NOW())' at line 3
-mysql> SELECT * FROM employee_payroll
-    -> WHERE start BETWEEN CAST('2019-01-03' AS DATE) AND  DATE(NOW());
+    -> ;
 +----+----------+-----------+------------+
 | id | name     | salary    | start      |
 +----+----------+-----------+------------+
-|  1 | KVV      | 100000000 | 2019-01-03 |
-|  2 | KVV      | 100000000 | 2019-01-03 |
-|  3 | K VISHNU | 100000000 | 2021-01-03 |
+|  1 | KVV      | 500000000 | 2019-01-03 |
+|  2 | KVV      | 500000000 | 2019-01-03 |
+|  3 | K VISHNU | 500000000 | 2021-01-03 |
 +----+----------+-----------+------------+
-3 rows in set (0.13 sec)
+3 rows in set (0.01 sec)
