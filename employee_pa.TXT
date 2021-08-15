@@ -1,11 +1,19 @@
-UC-1 
+UC-2
 
+mysql> DESCRIBE employee_payroll;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int unsigned | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(150) | NO   |     | NULL    |                |
+| salary | double       | NO   |     | NULL    |                |
+| start  | date         | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+4 rows in set (0.31 sec)
 
-mysql> use payroll_service;
-Database changed
-mysql> select database();
-+-----------------+
-| database()      |
-+-----------------+
-| payroll_service |
-+-----------------+
+mysql> insert into employee_payroll(name,salary,start)VALUES
+    -> ('KVV', 100000000,'2019-01-03'),
+    -> ('KVV', 100000000, '2019-01-03'),
+    -> ('K VISHNU', 100000000,'2021-01-03');
+Query OK, 3 rows affected (0.79 sec)
+Records: 3  Duplicates: 0  Warnings: 0
