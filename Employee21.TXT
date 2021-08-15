@@ -1,0 +1,11 @@
+UC-1 
+
+
+mysql> use payroll_service;
+Database changed
+mysql> select database();
++-----------------+
+| database()      |
++-----------------+
+| payroll_service |
++-----------------+
